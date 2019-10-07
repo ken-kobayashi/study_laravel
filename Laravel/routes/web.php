@@ -16,4 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('beginner', 'BeginnerController@index');
-Route::get('sample/model','SampleController@model');
+Route::get('sample/model/{type?}','SampleController@model');

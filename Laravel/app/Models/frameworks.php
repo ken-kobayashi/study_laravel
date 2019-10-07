@@ -13,8 +13,12 @@ class frameworks extends Model
 
 	public $timestamps = false;
 
-	public function getData() {
-		$data =DB::table($this->table)->get();
+	public function getData($type=null) {
+                $query = DB::table($this->table);
+
+		if($type != null) $query->where('type', $type);
+
+		$data = $query->get();
 
 		return $data;
 	}

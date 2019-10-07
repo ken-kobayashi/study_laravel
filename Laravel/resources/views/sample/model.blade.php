@@ -8,7 +8,7 @@
 <body>
   <ul>
     @foreach($data as $d)
-      <li>{{$d->name}}<li>
+      <li>{{$d->name}}</li>
     @endforeach
   </ul>
 </body>
